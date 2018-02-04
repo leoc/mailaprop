@@ -4,7 +4,7 @@
 ### file of email addresses in the format that mailaprop.el expects.
 
 # EDIT HERE: Tell the script where to find mailaprop.py.
-MAILAPROP=mailaprop.py
+MAILAPROP=${HOME}/.emacs.d/vendor/mailaprop/mailaprop.py
 
 # EDIT HERE: Say where your file of email addresses will live.
 OUTFILE=${HOME}/private/mailaprop/mailaprop-addresses.eld
@@ -16,7 +16,7 @@ mkdir -p ${HOME}/private/mailaprop/
 > ${TMP}
 
 # EDIT HERE: Pipe *all* your email through one invocation of mailaprop.py.
-cat test-data/*.mbox | ${MAILAPROP} >> ${TMP}
+find ${HOME}/.mail -type f -exec cat {} + | ${MAILAPROP} >> ${TMP}
 # Your email may be spread across many mbox files, and a given mbox
 # file may contain one or more email messages.  Here's another example
 # command line, designed for an nnmail tree containing thousands of
