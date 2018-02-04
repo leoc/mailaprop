@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 """Convert mbox input into elisp snippets for an email address database.
 See http://svn.red-bean.com/repos/kfogel/trunk/bin/README.mailaprop
