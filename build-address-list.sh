@@ -10,6 +10,8 @@ MAILAPROP=mailaprop.py
 OUTFILE=${HOME}/private/mailaprop/mailaprop-addresses.eld
 TMP=${OUTFILE}.tmp
 
+mkdir -p ${HOME}/private/mailaprop/
+
 # Clear out the tempfile.
 > ${TMP}
 
