@@ -553,7 +553,7 @@ def main():
     else:
         roots = args
   
-    msg_start_re = re.compile("^From |^X-From-Line: ")
+    msg_start_re = re.compile("^From |^X-From-Line: |^Delivered-To: ")
     p = email.Parser.HeaderParser()
     msg_str = ""
     line = sys.stdin.readline()
